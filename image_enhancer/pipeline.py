@@ -129,6 +129,15 @@ class AdvancedImageEnhancer:
             enhanced = self._adaptive_sharpening(enhanced)
             step_times[ProcessingStep.SHARPENING.value] = time.time() - t
 
+            if getattr(self.config, "ai_face", False):
+                try:
+                    from image_enhancer.ai_face import enhance_faces_ai
+                    t = time.time()
+                    enhanced = enhance_faces_ai(enhanced)
+                    step_times["ai_face"] = time.time() - t
+                except Exception as e:
+                    self.logger.warning(f"AI face enhancement error: {e}")
+
             t = time.time()
             if not self._save_image(enhanced, output_path):
                 raise RuntimeError(f"Failed to save image to {output_path}")

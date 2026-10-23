@@ -2,9 +2,10 @@
 opencv-python>=4.8.0
 numpy>=1.24.0
 
-# Optional
+# Optional & AI
 Pillow>=10.0.0         # EXIF orientation support
 PyYAML>=6.0            # YAML config profiles (pip install pyyaml)
+onnxruntime>=1.16.0    # AI Face Restoration Engine (GFPGAN ONNX)
 
 # Development
 pytest>=7.4.0

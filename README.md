@@ -1,47 +1,37 @@
-# Advanced Image Enhancer
+# Advanced Image Enhancer Pro ⚡
 
 [![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![OpenCV Version](https://img.shields.io/badge/opencv-4.8+-green.svg)](https://opencv.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A professional-grade image enhancement pipeline with both CLI and GUI interfaces. Enhances visual quality while preserving natural appearance — perfect for photographers, designers, and batch processing.
+A professional-grade on-device AI image enhancement studio with both modern Desktop GUI and Web Live Studio interfaces. Features local neural network inference (GFPGAN v1.4, YuNet, U2Net Rembg, Depth Anything v2) without external API costs or cloud privacy risks.
 
-## ✨ Features
+## ✨ All Local AI Skills Included
 
-- **Magic Button** — One-click full pipeline enhancement (resize → denoise → contrast → saturation → sharpen)
-- **Individual Controls** — Apply each step in isolation: Resize, Denoise, Sharpen, Contrast, Saturation, White Balance, Low Light
-- **Interactive GUI** — Side-by-side preview with real-time slider adjustments
-- **5 Enhancement Modes** — Natural, Sharp, Vibrant, Portrait, Landscape
-- **EXIF Auto-Rotation** — Corrects orientation from camera metadata
-- **Aspect Ratio Control** — Stretch, crop, or pad to fit target size
-- **Auto White Balance** — Gray-world color correction
-- **Low-Light Enhancement** — Adaptive gamma correction
-- **Parallel Batch Processing** — Multi-worker batch processing with JSON reports
-- **YAML Configuration** — Reusable enhancement profiles
-- **Quality Metrics** — Measures sharpness, contrast, SNR improvement
+- ⚡ **Local AI Face Restoration** — GFPGAN v1.4 + YuNet 5-point face alignment to restore realistic facial textures.
+- 🧴 **Natural Skin Beauty Retouching** — Bilateral pore-preserving smoothing with eye, brow, glasses, and lip protection.
+- 🖨️ **300 DPI Print Super-Resolution** — Lanczos-4 high-precision upscale (min 2624 × 3936 px, >1MB guaranteed) for official photo prints.
+- ✂️ **AI Background Removal (Rembg)** — 1-click transparent PNG or professional studio backdrops (Studio Gray, Clean White, Passport ID).
+- 🎬 **Cinematic Kodak Portra Bokeh** — Optical depth simulation with creamy bokeh falloff, subtle Pro Mist bloom, and organic film grain.
+- 🧹 **Edge-Preserving Denoising** — Non-local means denoising with Sobel gradient texture gating.
+- 🎯 **Interactive Comparison Slider** — Side-by-side interactive split slider in both Desktop GUI and Web Live Studio.
 
-## 🚀 Quick Start
+## 🚀 Quick Launch
 
-### Installation
-
+### 🌐 1. Web Live Studio (Browser Interface)
+Jalankan live server web studio dengan tampilan browser modern (port 8501):
 ```bash
-git clone https://github.com/Shega-PT/advanced-image-enhancer.git
-cd advanced-image-enhancer
-pip install -r requirements.txt
+./run_live_studio.sh
+# Atau: .venv_mac/bin/python web_studio.py
+# Buka di browser: http://localhost:8501
 ```
 
-### GUI — One-Click Magic
-
+### 🖥️ 2. Modern Desktop GUI (CustomTkinter)
+Jalankan aplikasi desktop native dengan dark-theme premium:
 ```bash
-python gui.py
+./run_gui_mac.sh
+# Atau: .venv_mac/bin/python gui.py
 ```
-
-1. Open an image (Ctrl+O)
-2. Click **Magic Enhance** — the full pipeline runs automatically
-3. Or tweak individual sliders and click single-step buttons
-4. Save the result (Ctrl+S)
-
-### CLI — Command Line
 
 ```bash
 # Enhance a single image

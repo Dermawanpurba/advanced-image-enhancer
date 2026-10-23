@@ -43,6 +43,7 @@ def parse_arguments(args: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--low-light", action="store_true")
     parser.add_argument("--workers", "-w", type=int, default=1)
     parser.add_argument("--config", "-cfg", default=None)
+    parser.add_argument("--ai-face", "--ai", action="store_true", help="Enable AI face restoration (GFPGAN)")
     return parser.parse_args(args)
 
 
@@ -67,6 +68,7 @@ def main(argv: list[str] | None = None) -> int:
             auto_wb=args.auto_wb,
             low_light_correction=args.low_light,
             workers=args.workers,
+            ai_face=getattr(args, "ai_face", False),
         )
 
         if args.config:

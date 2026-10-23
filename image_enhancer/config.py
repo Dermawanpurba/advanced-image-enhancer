@@ -91,6 +91,7 @@ class EnhancementConfig:
     auto_wb: bool = False
     low_light_correction: bool = False
     workers: int = 1
+    ai_face: bool = False
 
     def get_mode_params(self) -> Dict[str, Any]:
         params: Dict[str, Any] = {

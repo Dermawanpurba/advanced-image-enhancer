@@ -205,3 +205,30 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ── Project Specific Exclusions ──────────────────────────────────────────
+# Data, sample images & test results (jgn di-upload ke git)
+MD/
+MD_*/
+archive/
+samples/
+enhanced/
+scratch/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.tif
+*.tiff
+
+# Large ONNX Model Weights (>100MB exceeds GitHub push limit)
+models/*.onnx
+models/
+
+# macOS & Virtual Environments
+.DS_Store
+.venv/
+.venv_mac/
+*.log
+
